@@ -1,4 +1,4 @@
-# NGX Bootstrap Components
+# NGX Signal Utils
 
 This library is a comprehensive Angular utility suite that provides extensive support for Angular signals and includes advanced features for the ngrx/signals store. It is designed to enhance the integration and management of state within Angular applications using the latest signal-based techniques.
 
