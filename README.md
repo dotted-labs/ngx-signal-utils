@@ -1,5 +1,15 @@
 # NGX Signal Utils
 
+<p >
+  <a href="https://www.npmjs.com/package/@dotted-labs/ngx-signal-utils">
+    <img src="https://img.shields.io/npm/v/@dotted-labs/ngx-signal-utils" alt="NPM">
+  </a>
+  <a href="https://www.npmjs.com/package/@dotted-labs/ngx-signal-utils">
+    <img src="https://img.shields.io/npm/dm/@dotted-labs/ngx-signal-utils" alt="npm downloads">
+  </a>
+  <img src="https://img.shields.io/github/license/dotted-labs/ngx-signal-utils" alt="MIT">
+</p>
+
 This library is a comprehensive Angular utility suite that provides extensive support for Angular signals and includes advanced features for the ngrx/signals store. It is designed to enhance the integration and management of state within Angular applications using the latest signal-based techniques.
 
 ## 🚀 Installation
