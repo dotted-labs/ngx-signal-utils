@@ -13,21 +13,13 @@ export function withPagination<T>(params: { isLocal: boolean } = { isLocal: fals
   return signalStoreFeature(
     withEntities<T>(),
     withState<PaginationState>(initialState),
-    withComputed((store) => {
-      const computedList = {
-        isEmpty: computed(() => store.entities().length === 0),
-        hasNextPage: computed(() => store.page() * store.pageSize() < store.total()),
-        hasPreviousPage: computed(() => store.page() > 1),
-        totalPages: computed(() => Math.ceil(store.total() / store.pageSize())),
-        currentPage: computed(() => store.entities()),
-      };
-      if (params.isLocal) {
-        computedList.currentPage = computed(() =>
-          store.entities().slice((store.page() - 1) * store.pageSize(), store.page() * store.pageSize()),
-        );
-      }
-      return computedList;
-    }),
+    withComputed((store) => ({
+      isEmpty: computed(() => store.entities().length === 0),
+      hasNextPage: computed(() => store.page() * store.pageSize() < store.total()),
+      hasPreviousPage: computed(() => store.page() > 1),
+      totalPages: computed(() => Math.ceil(store.total() / store.pageSize())),
+      currentPage: computed(() => store.entities().slice((store.page() - 1) * store.pageSize(), store.page() * store.pageSize())),
+    })),
     withMethods((store) => ({
       changePage(page: number, callback?: CallableFunction): void {
         patchState(store, (state: PaginationState) => ({ ...state, page }));
