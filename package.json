@@ -4,8 +4,12 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build ngx-signal-utils && cp *.md dist/ngx-signal-utils/",
-    "publish": "npm run build && cd dist/ngx-signal-utils && npm publish --access public",
+    "build": "npm run build:ngx-utils && npm run build:ngx-signal-utils",
+    "build:ngx-utils": "ng build ngx-utils && cp *.md dist/ngx-utils/",
+    "build:ngx-signal-utils": "ng build ngx-signal-utils && cp *.md dist/ngx-signal-utils/",
+    "publish": "npm run build && npm run publish:ngx-utils && npm run publish:ngx-signal-utils",
+    "publish:ngx-utils": "npm run build:ngx-utils && cd dist/ngx-utils && npm publish --access public",
+    "publish:ngx-signal-utils": "npm run build:ngx-signal-utils && cd dist/ngx-signal-utils && npm publish --access public",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "lint": "ng lint ngx-signal-utils --fix"
