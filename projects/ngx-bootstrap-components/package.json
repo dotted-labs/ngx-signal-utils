@@ -1,14 +1,13 @@
 {
-  "name": "@dotted-labs/ngx-utils",
-  "version": "0.1.20",
+  "name": "@dotted-labs/ngx-bootstrap-components",
+  "version": "0.1.0",
   "peerDependencies": {
     "@angular/common": ">=18.0.0",
     "@angular/core": ">=18.0.0",
-    "@angular/platform-browser": ">=18.0.0",
+    "@ngx-translate/core": ">=15.0.0",
+    "bootstrap": ">=5.3.3",
     "@angular/forms": ">=18.0.0",
-    "@angular/router": ">=18.0.0",
-    "@ngrx/signals": ">=18.0.2",
-    "rxjs": ">=7.8.0"
+    "@angular/router": ">=18.0.0"
   },
   "dependencies": {
     "tslib": ">=2.3.0"

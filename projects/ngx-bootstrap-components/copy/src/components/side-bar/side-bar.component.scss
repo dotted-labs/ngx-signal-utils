@@ -1,0 +1,10 @@
+:host {
+  display: flex;
+  padding: 0;
+  width: 225px;
+  position: relative;
+  .logo {
+    height: 30px;
+    object-fit: contain;
+  }
+}
