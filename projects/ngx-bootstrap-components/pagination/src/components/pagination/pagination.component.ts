@@ -3,12 +3,11 @@ import { FormsModule } from '@angular/forms';
 import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
-  selector: 'app-pagination',
-  templateUrl: './pagination.component.html',
-  styleUrls: ['./pagination.component.scss'],
-  standalone: true,
-  imports: [FormsModule, TranslateModule],
-  changeDetection: ChangeDetectionStrategy.OnPush,
+    selector: 'app-pagination',
+    templateUrl: './pagination.component.html',
+    styleUrls: ['./pagination.component.scss'],
+    imports: [FormsModule, TranslateModule],
+    changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class PaginationComponent {
   public sizeOptions: InputSignal<number[]> = input<number[]>([10, 20, 50, 100]);

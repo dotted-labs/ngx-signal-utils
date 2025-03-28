@@ -3,18 +3,17 @@ import { ControlValueAccessor, FormsModule, NG_VALUE_ACCESSOR } from '@angular/f
 import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
-  selector: 'app-img-input',
-  templateUrl: './img-input.component.html',
-  styleUrls: ['./img-input.component.scss'],
-  standalone: true,
-  imports: [TranslateModule, FormsModule],
-  providers: [
-    {
-      provide: NG_VALUE_ACCESSOR,
-      useExisting: forwardRef(() => ImgInputComponent),
-      multi: true,
-    },
-  ],
+    selector: 'app-img-input',
+    templateUrl: './img-input.component.html',
+    styleUrls: ['./img-input.component.scss'],
+    imports: [TranslateModule, FormsModule],
+    providers: [
+        {
+            provide: NG_VALUE_ACCESSOR,
+            useExisting: forwardRef(() => ImgInputComponent),
+            multi: true,
+        },
+    ]
 })
 export class ImgInputComponent implements ControlValueAccessor {
   private readonly changeDetectorRef = inject(ChangeDetectorRef);

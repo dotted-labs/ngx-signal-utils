@@ -4,11 +4,10 @@ import { ThemeStore } from '../../services/theme.store';
 import { ThemeEnum } from '../../enums/themes.enum';
 
 @Component({
-  selector: 'lmdev-theme-switcher',
-  templateUrl: './theme-switcher.component.html',
-  styleUrl: './theme-switcher.component.scss',
-  standalone: true,
-  imports: [FormsModule],
+    selector: 'lmdev-theme-switcher',
+    templateUrl: './theme-switcher.component.html',
+    styleUrl: './theme-switcher.component.scss',
+    imports: [FormsModule]
 })
 export class ThemeSwitcherComponent {
   public ThemeEnum: typeof ThemeEnum = ThemeEnum;

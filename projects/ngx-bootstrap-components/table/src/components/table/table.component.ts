@@ -3,12 +3,11 @@ import { ChangeDetectionStrategy, Component, InputSignal, Signal, TemplateRef, c
 import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
-  selector: 'app-table',
-  templateUrl: './table.component.html',
-  styleUrls: ['./table.component.scss'],
-  standalone: true,
-  imports: [TranslateModule, NgTemplateOutlet],
-  changeDetection: ChangeDetectionStrategy.OnPush,
+    selector: 'app-table',
+    templateUrl: './table.component.html',
+    styleUrls: ['./table.component.scss'],
+    imports: [TranslateModule, NgTemplateOutlet],
+    changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class TableComponent {
   public items: InputSignal<unknown[]> = input.required<unknown[]>();
